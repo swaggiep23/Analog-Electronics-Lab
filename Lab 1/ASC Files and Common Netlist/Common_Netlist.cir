@@ -1,0 +1,23 @@
+
+Vs N002 0 SINE(0 50m 1k)
+R2 Vb 0 3.9k
+Re Ve 0 390
+C2 Vb Vin 10µ
+Rs Vin N002 2.2k
+Q1 Vc Vb Ve 0 NPN
+R1 N001 Vb  {X}
+*R1 N001 Vb 43.92k
+Rc N001 Vc 6.8k
+Cc1 Vout Vc 10µ
+Vcc N001 0 15V
+Rl Vout 0 5.6k
+C1 Ve 0 100µ
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\swaga\OneDrive\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.step param X 1k 55k 0.1k
+.op
+*.ac dec 1 1k 1k
+*.tran 10m
+.backanno
+.end
